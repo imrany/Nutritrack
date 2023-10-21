@@ -39,14 +39,14 @@
                 <p class="text-sm text-gray-700 -mt-1">Breakfast time</p>
             </div>
         </div>
-        <form class="flex h-[40px] items-center bg-gray-100 rounded-[30px] py-1 px-4 w-[50vw]">
+        <form action="/api/search" method="post" class="flex h-[40px] items-center bg-gray-100 rounded-[30px] py-1 px-4 w-[50vw]">
             <div class="w-[19px] h-[19px] text-green-500 mr-2">
                 <FaSearch/>
             </div>
-            <input type="text" class="flex-grow text-gray-500 bg-transparent focus:outline-none text-base placeholder:text-gray-500" bind:value={search_query} placeholder="Search for food"/>
-            <div class="w-[19px] ml-auto h-[19px] text-green-500 mr-2">
+            <input name="q" required type="text" class="flex-grow text-gray-500 bg-transparent focus:outline-none text-base placeholder:text-gray-500" bind:value={search_query} placeholder="Search for food"/>
+            <button class="w-[19px] ml-auto h-[19px] text-green-500 mr-2">
                 <FaAngleRight/>
-            </div>
+            </button>
         </form>
         <div class="flex items-center w-[18vw]">
             <button on:click={open_reminder_dialog} title='notifications' class="ml-auto w-[23px] h-[23px] rounded-[50px] text-green-600">

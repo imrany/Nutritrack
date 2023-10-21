@@ -113,7 +113,7 @@
     
     <div class="mt-12 mb-6 mx-8">
         <p class="text-2xl mb-2 text-gray-700 font-semibold">Recommendations</p>
-        <div class="grid grid-cols-4 gap-5 ">
+        <div class="grid grid-cols-4 gap-x-5 gap-y-8">
             {#if data.data}
                 {#each data.data as item}
                 <a href={`/blogs/${item.id}`} class="rounded-md ">
@@ -126,7 +126,11 @@
                     <div class="p-2">
                         <p class="text-base font-semibold">{item.title}</p>
                         <p class="text-sm text-gray-500">{item.kcal}</p>
-                        <p class="snippet">{item.measurements}</p>
+                        <div class="flex justify-between my-2">
+                            {#each item.measurements as n,i }
+                                <p class="text-xs">{n.quantity}|<span class="text-gray-600">{n.type}</span></p>
+                            {/each}
+                        </div>
                     </div>
                  </a>
                 {/each}

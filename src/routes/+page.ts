@@ -23,6 +23,14 @@ export async function load({ fetch }) {
                         {
                             quantity:'27g',
                             type:"Proteins"
+                        },
+                        {
+                            quantity:'8g',
+                            type:"Carbs"
+                        },
+                        {
+                            quantity:'27g',
+                            type:"Fats"
                         }
                     ],
                 },
@@ -35,6 +43,14 @@ export async function load({ fetch }) {
                         {
                             quantity:'27g',
                             type:"Proteins"
+                        },
+                        {
+                            quantity:'8g',
+                            type:"Carbs"
+                        },
+                        {
+                            quantity:'27g',
+                            type:"Fats"
                         }
                     ],
                 },
@@ -47,6 +63,14 @@ export async function load({ fetch }) {
                         {
                             quantity:'27g',
                             type:"Proteins"
+                        },
+                        {
+                            quantity:'8g',
+                            type:"Carbs"
+                        },
+                        {
+                            quantity:'27g',
+                            type:"Fats"
                         }
                     ],
                 },
@@ -59,6 +83,14 @@ export async function load({ fetch }) {
                         {
                             quantity:'27g',
                             type:"Proteins"
+                        },
+                        {
+                            quantity:'8g',
+                            type:"Carbs"
+                        },
+                        {
+                            quantity:'27g',
+                            type:"Fats"
                         }
                     ],
                 },
@@ -71,6 +103,14 @@ export async function load({ fetch }) {
                         {
                             quantity:'27g',
                             type:"Proteins"
+                        },
+                        {
+                            quantity:'8g',
+                            type:"Carbs"
+                        },
+                        {
+                            quantity:'27g',
+                            type:"Fats"
                         }
                     ],
                 },
@@ -83,6 +123,14 @@ export async function load({ fetch }) {
                         {
                             quantity:'27g',
                             type:"Proteins"
+                        },
+                        {
+                            quantity:'8g',
+                            type:"Carbs"
+                        },
+                        {
+                            quantity:'27g',
+                            type:"Fats"
                         }
                     ],
                 },
@@ -95,6 +143,14 @@ export async function load({ fetch }) {
                         {
                             quantity:'27g',
                             type:"Proteins"
+                        },
+                        {
+                            quantity:'8g',
+                            type:"Carbs"
+                        },
+                        {
+                            quantity:'27g',
+                            type:"Fats"
                         }
                     ],
                 },

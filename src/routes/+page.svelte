@@ -6,10 +6,25 @@
     import FaMoon from 'svelte-icons/fa/FaMoon.svelte'
     import FaSun from 'svelte-icons/fa/FaSun.svelte'
     import FaCloudSun from 'svelte-icons/fa/FaCloudSun.svelte'
+    import { onMount } from 'svelte';
+    import { getContext } from 'svelte';
 
     export let data: PageData;
     let title=`Morning, Mike`;
     let search_query:string;
+    const open_reminder_dialog=()=>{
+        const toast=document.getElementById('set-reminder') as HTMLDivElement
+        toast.style.transition='ease-in-out'
+        toast.style.transitionDuration='1s'
+        toast.style.transitionDelay='2s'
+        toast.style.display="flex"
+    };
+    onMount(() => {
+        open_reminder_dialog()
+        console.log('the component has mounted');
+    });
+    const answer = getContext('answer');
+    console.log(answer)
 </script>
 
 <div>
@@ -31,7 +46,7 @@
             </div>
         </form>
         <div class="flex items-center w-[18vw]">
-            <button title='notifications' class="ml-auto w-[23px] h-[23px] rounded-[50px] text-green-600">
+            <button on:click={open_reminder_dialog} title='notifications' class="ml-auto w-[23px] h-[23px] rounded-[50px] text-green-600">
                 <FaBell/>
             </button>
         </div>
@@ -93,29 +108,31 @@
         </div>
     </div>
     
-
-    <div class="grid grid-cols-4 gap-5 mt-12 mb-6 mx-8">
-        {#if data.data}
-            {#each data.data as item}
-            <a href={`/blogs/${item.id}`} class="rounded-md ">
-                <div class="flex flex-col">
-                     <!-- svelte-ignore a11y-img-redundant-alt -->
-                     <a href={item.image}>
-                        <img class="w-full object-cover h-[200px] rounded-[10px]" src={item.image} alt={item.title}/>
-                    </a>
+    <div class="mt-12 mb-6 mx-8">
+        <p class="text-2xl mb-2 text-gray-700 font-semibold">Recommendations</p>
+        <div class="grid grid-cols-4 gap-5 ">
+            {#if data.data}
+                {#each data.data as item}
+                <a href={`/blogs/${item.id}`} class="rounded-md ">
+                    <div class="flex flex-col">
+                         <!-- svelte-ignore a11y-img-redundant-alt -->
+                         <a href={item.image}>
+                            <img class="w-full object-cover h-[200px] rounded-[10px]" src={item.image} alt={item.title}/>
+                        </a>
+                    </div>
+                    <div class="p-2">
+                        <p class="text-base font-semibold">{item.title}</p>
+                        <p class="text-sm text-gray-500">{item.kcal}</p>
+                        <p class="snippet">{item.measurements}</p>
+                    </div>
+                 </a>
+                {/each}
+            {:else}
+                <div class="tag">
+                    <p class="error">{data.error}</p>
                 </div>
-                <div class="p-2">
-                    <p class="text-base font-semibold">{item.title}</p>
-                    <p class="text-sm text-gray-500">{item.kcal}</p>
-                    <p class="snippet">{item.measurements}</p>
-                </div>
-             </a>
-            {/each}
-        {:else}
-            <div class="tag">
-                <p class="error">{data.error}</p>
-            </div>
-        {/if}
+            {/if}
+        </div>
     </div>
 </div>
 

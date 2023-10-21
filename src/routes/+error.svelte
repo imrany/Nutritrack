@@ -2,4 +2,7 @@
 	import { page } from '$app/stores';
 </script>
 
-<h1>{$page.status}: {$page.error.message}</h1>
+<div class="h-[100vh] flex flex-col justify-center items-center w-[80vw]">
+	<p class="text-xl">{$page.status}: {$page.error.message}</p>
+	<a href='/' class="mt-2 text-blue-500 underline">Go Home</a>
+</div>

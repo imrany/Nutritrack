@@ -1,12 +1,7 @@
-<script>
-    /** @type {import('./$types').PageData} */
-     export let data;
+<script lang="ts">
+    import type { PageData } from './$types';
+    export let data: PageData;
     let title=`For you`;
-
-    // setTimeout(()=>{
-    //     // @ts-ignore
-    //     document.querySelector('.tag').style.display='none'
-    // },3000)
 </script>
 
 <div class="index start">
@@ -33,3 +28,10 @@
         {/if}
     </div>
 </div>
+
+
+<style lang="postcss">
+    :global(html) {
+        background-color: theme(colors.gray.100);
+    }
+</style>

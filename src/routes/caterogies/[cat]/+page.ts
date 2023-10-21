@@ -1,7 +1,9 @@
-/** @type {import('./$types').PageLoad} */
-export async function load({ fetch, params }) {
-    try{
-        // @ts-ignore
+import { error } from '@sveltejs/kit';
+import type { PageLoad } from './$types';
+
+export const load: PageLoad = ({ fetch, params }) => {
+    try {
+         // @ts-ignore
         // const url=`https://jsonplaceholder.typicode.com/users/${params.id}`
         // const response =await fetch(url);
         // const data= await response.json();
@@ -14,6 +16,12 @@ export async function load({ fetch, params }) {
         //     }
         // }
 
+        // if (params.cat === 'hello-world') {
+        //     return {
+        //         title: 'Hello world!',
+        //         content: 'Welcome to our blog. Lorem ipsum dolor sit amet...',
+        //     };
+        // }
         return {
             data:{
                     id:1,
@@ -31,12 +39,10 @@ export async function load({ fetch, params }) {
                     `,
                 }
         }
-
-    }catch(error){
-        return {
-            // @ts-ignore
-            error:`No Internet!`
-        }
+    } catch (error:any) {
+        error(404, 'Not found');
+        // return {
+        //     error:`No Internet!`
+        // }
     }
-}
-
+};

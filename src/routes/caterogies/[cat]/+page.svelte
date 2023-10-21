@@ -1,15 +1,13 @@
-<script>
-// @ts-nocheck
-
-/** @type {import('./$types').PageData} */
-export let data;
-
+<script lang="ts">
+	import type { PageData } from './$types';
+    export let data: PageData;
 </script>
 
 <div class="detail start">
     {#if data.data}
-        <!-- svelte-ignore a11y-img-redundant-alt -->
-        <a href={data.data.image}><img src={data.data.image} alt="blog image"/></a>
+        <a href={data.data.image}>
+            <img src={data.data.image} alt="hey"/>
+        </a>
         <div class="content">
             <div class="author">Author: 
                 <div class="info"><a href={data.data.authorImage}><img src={data.data.authorImage} alt='.'/></a> <b>{data.data.author}</b></div> 
@@ -24,3 +22,4 @@ export let data;
     {/if}
     
 </div>
+    

@@ -60,7 +60,6 @@ export async function load({ fetch }) {
         }
     }catch(error){
         return {
-            // @ts-ignore
             error:`No Internet!`
         }
     }

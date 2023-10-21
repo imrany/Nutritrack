@@ -1,16 +1,20 @@
-<script>
-  import Nav from "$lib/nav.svelte";
-  import Footer from "$lib/footer.svelte";
-  import '../css/style.css'
-  import '../css/responsive.css'
+<script lang="ts">
+	import type { LayoutData } from './$types';
+	import '../app.css'
 
+	export let data: LayoutData;
 </script>
 
 <header>
-    <Nav/>
+    <h1>Nutritrack</h1>
+
+    <div class="submenu">
+        {#each data.sections as section}
+            <a href="/settings/{section.slug}">{section.title}</a>
+        {/each}
+    </div>
 </header>
+
 <main>
-    <!-- page content -->
     <slot></slot>
 </main>
-<Footer/>

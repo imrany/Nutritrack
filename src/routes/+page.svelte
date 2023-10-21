@@ -3,6 +3,9 @@
     import FaBell from 'svelte-icons/fa/FaBell.svelte'
     import FaSearch from 'svelte-icons/fa/FaSearch.svelte'
     import FaAngleRight from 'svelte-icons/fa/FaAngleRight.svelte'
+    import FaMoon from 'svelte-icons/fa/FaMoon.svelte'
+    import FaSun from 'svelte-icons/fa/FaSun.svelte'
+    import FaCloudSun from 'svelte-icons/fa/FaCloudSun.svelte'
 
     export let data: PageData;
     let title=`Morning, Mike`;
@@ -33,25 +36,79 @@
             </button>
         </div>
     </nav>
-    <div class="px-8 py-2">
+    <div class="px-8 py-2 mt-4">
         <p class="text-xl mb-2 text-gray-700 font-semibold">Reminder</p>
-        <div class="bg-green-100 rounded-md flex flex-col">
-            <div></div>
+        <div class="flex flex-col gap-y-2">
+            <div class="bg-green-100 px-4 py-2 rounded-md flex flex-col">
+                <div class="flex justify-between">
+                    <div class="flex items-center">
+                        <div class="w-[20px] h-[20px] mr-2 text-green-500">
+                            <FaCloudSun/>
+                        </div>
+                        <p class="text-base font-semibold">Breakfast</p>
+                    </div>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <p class="">8:30AM</p>
+                        <div class="w-[15px] h-[15px]">
+                            <FaAngleRight/>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2 ml-2">2 Slices whole wheat bread.</p>
+            </div>
+            <div class="bg-green-100 px-4 py-2 rounded-md flex flex-col">
+                <div class="flex justify-between">
+                    <div class="flex items-center">
+                        <div class="w-[20px] h-[20px] mr-2 text-green-500">
+                            <FaSun/>
+                        </div>
+                        <p class="text-base font-semibold">Lunch</p>
+                    </div>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <p class="">12:30PM</p>
+                        <div class="w-[15px] h-[15px]">
+                            <FaAngleRight/>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2 ml-2">Rice and Beans.</p>
+            </div>
+            <div class="bg-green-100 px-4 py-2 rounded-md flex flex-col">
+                <div class="flex justify-between">
+                    <div class="flex items-center">
+                        <div class="w-[20px] h-[20px] mr-2 text-green-500">
+                            <FaMoon/>
+                        </div>
+                        <p class="text-base font-semibold">Supper</p>
+                    </div>
+                    <div class="flex items-center text-gray-500 text-sm">
+                        <p class="">8:30PM</p>
+                        <div class="w-[15px] h-[15px]">
+                            <FaAngleRight/>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2 ml-2">Ugali, kales and meat.</p>
+            </div>
         </div>
     </div>
+    
+
     <div class="grid grid-cols-4 gap-5 mt-12 mb-6 mx-8">
         {#if data.data}
             {#each data.data as item}
-            <a href={`/blogs/${item.id}`} class="rounded-md hover:shadow-md hover:shadow-slate-400">
+            <a href={`/blogs/${item.id}`} class="rounded-md ">
                 <div class="flex flex-col">
                      <!-- svelte-ignore a11y-img-redundant-alt -->
                      <a href={item.image}>
-                        <img class="w-[230px] h-[200px] rounded-[10px]" src={item.image} alt={item.title}/>
+                        <img class="w-full object-cover h-[200px] rounded-[10px]" src={item.image} alt={item.title}/>
                     </a>
                 </div>
-                <p class="text-base font-semibold">{item.title}</p>
-                <p class="text-sm text-gray-500">{item.kcal}</p>
-                 <p class="snippet">{item.measurements}</p>
+                <div class="p-2">
+                    <p class="text-base font-semibold">{item.title}</p>
+                    <p class="text-sm text-gray-500">{item.kcal}</p>
+                    <p class="snippet">{item.measurements}</p>
+                </div>
              </a>
             {/each}
         {:else}

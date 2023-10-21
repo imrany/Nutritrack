@@ -16,8 +16,8 @@ export async function load({ fetch }) {
             data:[
                 {
                     id:1,
-                    title:'Salad with eggs',
-                    image:'/eggs.png',
+                    title:'Pineapple',
+                    image:'/pineapple.png',
                     kcal:'294 kcal | 200G',
                     measurements:[
                         {
@@ -28,8 +28,8 @@ export async function load({ fetch }) {
                 },
                 {
                     id:2,
-                    title:'Salad with eggs',
-                    image:'/eggs.png',
+                    title:'Porridge',
+                    image:'/porridge.png',
                     kcal:'294 kcal | 200G',
                     measurements:[
                         {
@@ -40,8 +40,56 @@ export async function load({ fetch }) {
                 },
                 {
                     id:3,
-                    title:'Salad with eggs',
+                    title:'Brocolli',
+                    image:'/brocolli.png',
+                    kcal:'294 kcal | 200G',
+                    measurements:[
+                        {
+                            quantity:'27g',
+                            type:"Proteins"
+                        }
+                    ],
+                },
+                {
+                    id:4,
+                    title:'Apple',
+                    image:'/apple.png',
+                    kcal:'294 kcal | 200G',
+                    measurements:[
+                        {
+                            quantity:'27g',
+                            type:"Proteins"
+                        }
+                    ],
+                },
+                {
+                    id:5,
+                    title:'Beans',
+                    image:'/beans.png',
+                    kcal:'294 kcal | 200G',
+                    measurements:[
+                        {
+                            quantity:'27g',
+                            type:"Proteins"
+                        }
+                    ],
+                },
+                {
+                    id:6,
+                    title:'Eggs',
                     image:'/eggs.png',
+                    kcal:'294 kcal | 200G',
+                    measurements:[
+                        {
+                            quantity:'27g',
+                            type:"Proteins"
+                        }
+                    ],
+                },
+                {
+                    id:7,
+                    title:'Rice',
+                    image:'/rice.png',
                     kcal:'294 kcal | 200G',
                     measurements:[
                         {

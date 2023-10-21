@@ -26,7 +26,10 @@
     const answer = getContext('answer');
     console.log(answer)
 </script>
-
+<svelte:head>
+	<title>Nutritrack | Home</title>
+	<meta name="description" content="This is where the description goes for SEO" />
+</svelte:head>
 <div>
     <nav class="flex justify-between border-b-[1px] px-6 py-2">
         <div class="flex items-center">

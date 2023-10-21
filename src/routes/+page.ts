@@ -16,46 +16,40 @@ export async function load({ fetch }) {
             data:[
                 {
                     id:1,
-                    title:'Rongo University on Fire',
-                    image:'/img1.jpg',
-                    body:`
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    
-                    `,
+                    title:'Salad with eggs',
+                    image:'/eggs.png',
+                    kcal:'294 kcal | 200G',
+                    measurements:[
+                        {
+                            quantity:'27g',
+                            type:"Proteins"
+                        }
+                    ],
                 },
                 {
                     id:2,
-                    title:'Rongo University on Fire',
-                    image:'/img2.jpg',
-                    body:`
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    
-                    `,
+                    title:'Salad with eggs',
+                    image:'/eggs.png',
+                    kcal:'294 kcal | 200G',
+                    measurements:[
+                        {
+                            quantity:'27g',
+                            type:"Proteins"
+                        }
+                    ],
                 },
                 {
                     id:3,
-                    title:'Rongo University on Fire',
-                    image:'/img6.jpg',
-                    body:`
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    Early this morning, Rongo University was face a tragedy events, a wild fire enter the school and destroy 88% on the school facilities. 
-                    
-                    `,
-                }
+                    title:'Salad with eggs',
+                    image:'/eggs.png',
+                    kcal:'294 kcal | 200G',
+                    measurements:[
+                        {
+                            quantity:'27g',
+                            type:"Proteins"
+                        }
+                    ],
+                },
             ]
         }
     }catch(error){

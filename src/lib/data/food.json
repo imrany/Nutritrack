@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "title":"Pineapple",
+        "image":"/pineapple.png",
+        "kcal":"294 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"27g",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"8g",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"27g",
+                "type":"Fats"
+            }
+        ]
+    }
+]

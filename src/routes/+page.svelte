@@ -33,7 +33,7 @@
 <div>
     <nav class="flex justify-between border-b-[1px] px-6 py-2">
         <div class="flex items-center">
-            <img class="w-[45px] h-[45px] object-cover rounded-[50px]" src='/eggs.png' alt='.'/>
+            <img class="w-[45px] h-[45px] object-cover rounded-[50px]" src='/images/eggs.png' alt='.'/>
             <div class="ml-2">
                 <p class="text-base font-semibold">{title}</p>
                 <p class="text-sm text-gray-700 -mt-1">Breakfast time</p>

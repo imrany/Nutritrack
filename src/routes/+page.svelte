@@ -116,12 +116,10 @@
         <div class="grid grid-cols-4 gap-x-5 gap-y-8">
             {#if data.data}
                 {#each data.data as item}
-                <a href={`/blogs/${item.id}`} class="rounded-md ">
+                <a href={`/categories/${item.id}`} class="rounded-md ">
                     <div class="flex flex-col">
-                         <!-- svelte-ignore a11y-img-redundant-alt -->
-                         <a href={item.image}>
-                            <img class="w-full object-cover h-[200px] rounded-[10px]" src={item.image} alt={item.title}/>
-                        </a>
+                        <!-- svelte-ignore a11y-img-redundant-alt -->
+                        <img class="w-full object-cover h-[200px] rounded-[10px]" src={item.image} alt={item.title}/>
                     </div>
                     <div class="p-2">
                         <p class="text-base font-semibold">{item.title}</p>

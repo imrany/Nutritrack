@@ -1,19 +1,18 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+
     export let data: PageData;
+    const cat=data.data.find((item)=>item.id==data.cat)
 </script>
 
-<div class="detail start">
-    {#if data.data}
-        <a href={data.data.image}>
-            <img src={data.data.image} alt="hey"/>
+<div class="flex flex-col py-10 items-center h-[100vh]">
+    {#if cat}
+        <a href={cat.image}>
+            <img src={cat.image} alt={cat.title} class="w-[40vw] h-[400px]"/>
         </a>
         <div class="content">
-            <div class="author">Author: 
-                <div class="info"><a href={data.data.authorImage}><img src={data.data.authorImage} alt='.'/></a> <b>{data.data.author}</b></div> 
-            </div>
-            <h1>{data.data.title}</h1>
-            <p>{data.data.body}</p>
+            <h1>{cat.title}</h1>
+            <p>{cat.kcal}</p>
         </div>
     {:else}
         <div class="tag">

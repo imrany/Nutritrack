@@ -1,4 +1,4 @@
-/** @type {import('./$types').PageLoad} */
+import type { PageLoad } from './$types';
 export async function load({ fetch }) {
     try{
         const url=`/data/food.json`
@@ -9,10 +9,10 @@ export async function load({ fetch }) {
                 return {data}
         }else{
             return {
-            error:`Status ${response.status}, Could not fetch!`
+                error:`Status ${response.status}, Could not fetch!`
             }
         }
-    }catch(error){
+    }catch(error:any){
         return {
             error:`No Internet!`
         }

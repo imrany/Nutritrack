@@ -6,11 +6,11 @@
         "kcal":"294 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"40%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"15%",
                 "type":"Carbs"
             },
             {
@@ -123,6 +123,66 @@
         "id":7,
         "title":"Rice",
         "image":"/images/rice.png",
+        "kcal":"294 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"27%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"8%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"27%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":8,
+        "title":"Grapes",
+        "image":"/images/grapes.png",
+        "kcal":"294 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"27%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"8%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"27%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":9,
+        "title":"Maize",
+        "image":"/images/maize.png",
+        "kcal":"294 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"27%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"8%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"27%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":10,
+        "title":"Wheat",
+        "image":"/images/wheat.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
             {

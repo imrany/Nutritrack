@@ -23,7 +23,10 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"bcryptjs": "^2.4.3",
 		"chart.js": "^4.4.0",
+		"jsonwebtoken": "^9.0.2",
+		"mongoose": "^7.6.3",
 		"svelte-icons": "^2.1.0"
 	}
 }

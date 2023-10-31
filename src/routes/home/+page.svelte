@@ -29,7 +29,10 @@
     }else if(hour===12){
         determinePeriod='Noon' 
         time='Lunch'
-    }else{
+    }else if(hour>12){
+        determinePeriod='Afternoon' 
+        time='Lunch'
+    }else if(hour>16){
         determinePeriod='Evening' 
         time="Supper"
     }
@@ -76,6 +79,7 @@
                 }
             })
             classified_data=arr
+            console.log(classified_data)
         }else{
             classified_data=data.data
         }

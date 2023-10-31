@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { PageData } from './$types';
-    import FaBell from 'svelte-icons/fa/FaBell.svelte'
+    import FaCog from 'svelte-icons/fa/FaCog.svelte'
     import FaSearch from 'svelte-icons/fa/FaSearch.svelte'
     import FaAngleRight from 'svelte-icons/fa/FaAngleRight.svelte'
     import FaMoon from 'svelte-icons/fa/FaMoon.svelte'
@@ -9,21 +9,29 @@
     import { onMount } from 'svelte';
     import { getContext } from 'svelte';
     import { goto } from '$app/navigation';
+  import { browser } from '$app/environment';
 
     export let data: PageData;
     const userdata:any = getContext('userdata');
     let search=false;
     let search_data:any=[]
+    let classified_data:any=[]
 
     const date=new Date()
     const hour=date.getHours()
+    const min=date.getMinutes()
     let determinePeriod:string;
+    let todo:string;
+    let time:string;
     if(hour<12){
         determinePeriod='Morning' 
+        time='Breakfast'
     }else if(hour===12){
-        determinePeriod='noon' 
+        determinePeriod='Noon' 
+        time='Lunch'
     }else{
         determinePeriod='Evening' 
+        time="Supper"
     }
 
     let title:string;
@@ -59,9 +67,26 @@
         search_data=[]
     }
 
+    const classifyFood=async()=>{
+        if(localStorage.getItem("classified")===`${true}`){
+            let arr:any=[]
+            data.data.forEach((data:any)=>{
+                if(data.time.includes(time)){
+                    arr.push(data)
+                }
+            })
+            classified_data=arr
+        }else{
+            classified_data=data.data
+        }
+    }
+    let classify=browser?window.localStorage.getItem("classified"):null
+
     onMount(() => {
         checkIfAuthenticated()
         title=`${determinePeriod}, ${userdata.username}`;
+        todo=`${time}`
+        classifyFood()
     });
 </script>
 <svelte:head>
@@ -74,7 +99,7 @@
             <img class="w-[45px] h-[45px] object-cover rounded-[50px]" src='/images/eggs.png' alt='.'/>
             <div class="ml-2">
                 <p class="text-sm font-semibold">{title}</p>
-                <p class="text-sm text-gray-700 -mt-1">Breakfast time</p>
+                <p class="text-sm text-gray-700 -mt-1">{todo} time</p>
             </div>
         </div>
         <form on:submit={handleSearch} class="flex h-[40px] items-center bg-gray-100 rounded-[30px] py-1 px-4 w-[50vw]">
@@ -88,7 +113,7 @@
         </form>
         <div class="flex items-center w-[18vw]">
             <button on:click={open_reminder_dialog} title='notifications' class="ml-auto w-[23px] h-[23px] rounded-[50px] text-green-600">
-                <FaBell/>
+                <FaCog/>
             </button>
         </div>
     </nav>
@@ -153,12 +178,16 @@
     
     <div class="mt-12 mb-6 mx-8">
         {#if search===false}
-            <p class="text-2xl mb-2 text-gray-700 font-semibold">Recommendations</p>
+            {#if classify===`${true}`}
+                <p class="text-2xl mb-2 text-gray-700 font-semibold">{time} meals - {hour}:{min}{hour<12?"am":"pm"}</p>
+            {:else}
+                <p class="text-2xl mb-2 text-gray-700 font-semibold">Recommendations</p>
+            {/if}
         {/if}
         {#if search===false}
             <div class="grid grid-cols-4 gap-x-5 gap-y-8">
                 {#if data.data}
-                    {#each data.data as item}
+                    {#each classified_data as item}
                     <a href={`/categories/${item.id}`} class="rounded-md ">
                         <div class="flex flex-col">
                             <!-- svelte-ignore a11y-img-redundant-alt -->

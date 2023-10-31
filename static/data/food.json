@@ -2,7 +2,7 @@
     {
         "id":1,
         "title":"Pineapple",
-        "time":"lunch",
+        "time":"Lunch",
         "image":"/images/pineapple.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -23,7 +23,7 @@
     {
         "id":2,
         "title":"Porridge",
-        "time":"breakfast",
+        "time":"Breakfast",
         "image":"/images/porridge.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -44,7 +44,7 @@
     {
         "id":3,
         "title":"Brocolli",
-        "time":"lunch",
+        "time":"Lunch",
         "image":"/images/brocolli.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -65,7 +65,7 @@
     {
         "id":4,
         "title":"Apple",
-        "time":"breakfast",
+        "time":"Breakfast",
         "image":"/images/apple.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -86,7 +86,7 @@
     {
         "id":5,
         "title":"Beans",
-        "time":"lunch",
+        "time":"Lunch",
         "image":"/images/beans.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -107,7 +107,7 @@
     {
         "id":6,
         "title":"Eggs",
-        "time":"breakfast",
+        "time":"Breakfast",
         "image":"/images/eggs.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -128,7 +128,7 @@
     {
         "id":7,
         "title":"Rice",
-        "time":"all",
+        "time":"All",
         "image":"/images/rice.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -149,7 +149,7 @@
     {
         "id":8,
         "title":"Grapes",
-        "time":"all",
+        "time":"All",
         "image":"/images/grapes.png",
         "kcal":"294 kcal | 200G",
         "measurements":[
@@ -169,7 +169,7 @@
     },
     {
         "id":9,
-        "time":"all",
+        "time":"All",
         "title":"Maize",
         "image":"/images/maize.png",
         "kcal":"294 kcal | 200G",
@@ -191,7 +191,7 @@
     {
         "id":10,
         "title":"Wheat",
-        "time":"all",
+        "time":"All",
         "image":"/images/wheat.png",
         "kcal":"294 kcal | 200G",
         "measurements":[

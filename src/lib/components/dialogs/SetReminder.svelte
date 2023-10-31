@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { browser } from '$app/environment';
 import { goto } from '$app/navigation';
 import FaTimes from 'svelte-icons/fa/FaTimes.svelte'
-import FaPlus from 'svelte-icons/fa/FaPlus.svelte'
 
 let error:string=''
 const dialog_close=()=>{
@@ -12,14 +12,23 @@ const dialog_close=()=>{
     welcome_toast.style.display="none"
 };
 
-async function handleAdd(e:any){
+async function toggleClassifier(e:any){
     e.preventDefault()
     try {
-        goto(`?search_term=${e.target.name.value}`)
+        if(browser){
+            if(localStorage.getItem("classified")===`${true}`){
+                window.localStorage.setItem("classified",`${false}`)
+            }else{
+                window.localStorage.setItem("classified",`${true}`)
+            }
+            dialog_close()
+            window.location.reload()
+        }
     } catch (error:any) {
         error=error.message
     }
 }
+let classify=browser?window.localStorage.getItem("classified"):null
 </script>
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div id="set-reminder" style="background:rgba(0, 0, 0, 0.1); display:none;" on:dblclick={dialog_close} class="fixed bottom-0 top-0 left-0 right-0 z-40">
@@ -33,15 +42,18 @@ async function handleAdd(e:any){
                 </button>
                 <div class="pb-4 px-8 lg:w-[35vw] md:w-[45vw] sm:w-[55vw]">
                     <p class="text-red-500 text-center text-xl max-md:text-lg max-sm:text-sm">{error}</p>
-                    <form class="flex flex-col items-center max-sm:text-xs my-4" on:submit={handleAdd}>
-                        <p class="text-xl max-md:text-lg mb-1 max-sm:text-sm">Set reminder</p>
-                        <input type="text" name="name" class="mt-2 border-green-400 border-[1px] bg-white rounded-lg focus:outline-1 focus:outline-green-400 w-[100%] py-2 px-4 placeholder:text-sm text-sm" placeholder="member@example.com" required/>
-                        <button class="mt-4 bg-green-400 text-white w-fit px-5 py-2 flex justify-center items-center text-sm h-fit  cursor-pointer rounded-[5px]">
-                            <div class="w-[15px] h-[15px] mr-3">
-                                <FaPlus/>
-                            </div>
-                            <span>Add</span>
-                        </button>
+                    <form class="flex flex-col items-center max-sm:text-xs my-4" on:submit={toggleClassifier}>
+                        {#if classify!==`${true}`}
+                            <p class="text-xl max-md:text-lg mb-1 max-sm:text-sm">Turn on classify meals with time</p>
+                            <button class="mt-4 bg-green-400 text-white w-fit px-5 py-2 flex justify-center items-center text-sm h-fit  cursor-pointer rounded-[5px]">
+                                <span>Turn On</span>
+                            </button>
+                        {:else}
+                            <p class="text-xl max-md:text-lg mb-1 max-sm:text-sm">Turn off classify meals with time</p>
+                            <button class="mt-4 bg-green-400 text-white w-fit px-5 py-2 flex justify-center items-center text-sm h-fit  cursor-pointer rounded-[5px]">
+                                <span>Turn Off</span>
+                            </button>
+                        {/if}
                     </form>
                 </div>
             </div>

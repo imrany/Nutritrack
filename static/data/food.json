@@ -4,10 +4,10 @@
         "title":"Pineapple",
         "time":"Lunch",
         "image":"/images/pineapple.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"2 kcal | 200G",
         "measurements":[
             {
-                "quantity":"40%",
+                "quantity":"4%",
                 "type":"Proteins"
             },
             {
@@ -15,7 +15,7 @@
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"7%",
                 "type":"Fats"
             }
         ]
@@ -25,14 +25,14 @@
         "title":"Porridge",
         "time":"Breakfast",
         "image":"/images/porridge.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"200 kcal | 200G",
         "measurements":[
             {
                 "quantity":"27%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"80%",
                 "type":"Carbs"
             },
             {
@@ -46,18 +46,18 @@
         "title":"Brocolli",
         "time":"Lunch",
         "image":"/images/brocolli.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"94 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"8%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"18%",
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"7%",
                 "type":"Fats"
             }
         ]
@@ -67,10 +67,10 @@
         "title":"Apple",
         "time":"Breakfast",
         "image":"/images/apple.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"4 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"2%",
                 "type":"Proteins"
             },
             {
@@ -78,7 +78,7 @@
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"2%",
                 "type":"Fats"
             }
         ]
@@ -88,14 +88,14 @@
         "title":"Beans",
         "time":"Lunch",
         "image":"/images/beans.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"290 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"95%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"40%",
                 "type":"Carbs"
             },
             {
@@ -109,18 +109,18 @@
         "title":"Eggs",
         "time":"Breakfast",
         "image":"/images/eggs.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"394 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"90%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"50%",
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"80%",
                 "type":"Fats"
             }
         ]
@@ -130,14 +130,14 @@
         "title":"Rice",
         "time":"All",
         "image":"/images/rice.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"300 kcal | 200G",
         "measurements":[
             {
                 "quantity":"27%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"70%",
                 "type":"Carbs"
             },
             {
@@ -151,18 +151,18 @@
         "title":"Grapes",
         "time":"All",
         "image":"/images/grapes.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"20 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"5%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"2%",
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"2%",
                 "type":"Fats"
             }
         ]
@@ -172,14 +172,14 @@
         "time":"All",
         "title":"Maize",
         "image":"/images/maize.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"300 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"10%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"80%",
                 "type":"Carbs"
             },
             {
@@ -193,18 +193,18 @@
         "title":"Wheat",
         "time":"All",
         "image":"/images/wheat.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"296 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"2%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"70%",
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"25%",
                 "type":"Fats"
             }
         ]

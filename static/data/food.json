@@ -2,19 +2,20 @@
     {
         "id":1,
         "title":"Pineapple",
+        "time":"Lunch",
         "image":"/images/pineapple.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"2 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"4%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"15%",
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"7%",
                 "type":"Fats"
             }
         ]
@@ -22,15 +23,16 @@
     {
         "id":2,
         "title":"Porridge",
+        "time":"Breakfast",
         "image":"/images/porridge.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"200 kcal | 200G",
         "measurements":[
             {
                 "quantity":"27%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"80%",
                 "type":"Carbs"
             },
             {
@@ -42,19 +44,20 @@
     {
         "id":3,
         "title":"Brocolli",
+        "time":"Lunch",
         "image":"/images/brocolli.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"94 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"8%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"18%",
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"7%",
                 "type":"Fats"
             }
         ]
@@ -62,11 +65,12 @@
     {
         "id":4,
         "title":"Apple",
+        "time":"Breakfast",
         "image":"/images/apple.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"4 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"2%",
                 "type":"Proteins"
             },
             {
@@ -74,7 +78,7 @@
                 "type":"Carbs"
             },
             {
-                "quantity":"27%",
+                "quantity":"2%",
                 "type":"Fats"
             }
         ]
@@ -82,15 +86,16 @@
     {
         "id":5,
         "title":"Beans",
+        "time":"Lunch",
         "image":"/images/beans.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"290 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"95%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"40%",
                 "type":"Carbs"
             },
             {
@@ -102,15 +107,37 @@
     {
         "id":6,
         "title":"Eggs",
+        "time":"Breakfast",
         "image":"/images/eggs.png",
-        "kcal":"294 kcal | 200G",
+        "kcal":"394 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"90%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"50%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"80%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":7,
+        "title":"Rice",
+        "time":"All",
+        "image":"/images/rice.png",
+        "kcal":"300 kcal | 200G",
         "measurements":[
             {
                 "quantity":"27%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"70%",
                 "type":"Carbs"
             },
             {
@@ -120,21 +147,274 @@
         ]
     },
     {
-        "id":7,
-        "title":"Rice",
-        "image":"/images/rice.png",
-        "kcal":"294 kcal | 200G",
+        "id":8,
+        "title":"Grapes",
+        "time":"All",
+        "image":"/images/grapes.png",
+        "kcal":"20 kcal | 200G",
         "measurements":[
             {
-                "quantity":"27%",
+                "quantity":"5%",
                 "type":"Proteins"
             },
             {
-                "quantity":"8%",
+                "quantity":"2%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"2%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":9,
+        "time":"All",
+        "title":"Maize",
+        "image":"/images/maize.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"10%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"80%",
                 "type":"Carbs"
             },
             {
                 "quantity":"27%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":10,
+        "title":"Wheat",
+        "time":"All",
+        "image":"/images/wheat.png",
+        "kcal":"296 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"2%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"70%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":11,
+        "title":"chips and eggs",
+        "time":"Lunch",
+        "image":"/images/chips.png",
+        "kcal":"200 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"50%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"70%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":13,
+        "title":"Ugali choma",
+        "time":"Lunch Supper",
+        "image":"/images/nyama.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"60%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"75%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":15,
+        "title":"Sukuma",
+        "time":"Lunch Supper",
+        "image":"/images/sukuma.png",
+        "kcal":"400 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"2%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"70%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":16,
+        "title":"Chapati",
+        "time":"Breakfast Lunch Supper",
+        "image":"/images/chapati.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"60%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"75%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":17,
+        "title":"Samosas",
+        "time":"Breakfast Supper",
+        "image":"/images/samosas.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"60%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"75%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":18,
+        "title":"Pilau",
+        "time":"Lunch Supper",
+        "image":"/images/pilau.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"60%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"75%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":19,
+        "title":"Fish",
+        "time":"Lunch Supper",
+        "image":"/images/samaki.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"90%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"45%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":20,
+        "title":"Githeri",
+        "time":"Lunch Supper",
+        "image":"/images/githeri.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"90%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"45%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":20,
+        "title":"Mahamri",
+        "time":"Breakfast Lunch Supper",
+        "image":"/images/mahamri.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"90%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"45%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
+                "type":"Fats"
+            }
+        ]
+    },
+    {
+        "id":21,
+        "title":"Kebab",
+        "time":"Breakfast Lunch Supper",
+        "image":"/images/kebab.png",
+        "kcal":"300 kcal | 200G",
+        "measurements":[
+            {
+                "quantity":"20%",
+                "type":"Proteins"
+            },
+            {
+                "quantity":"45%",
+                "type":"Carbs"
+            },
+            {
+                "quantity":"25%",
                 "type":"Fats"
             }
         ]

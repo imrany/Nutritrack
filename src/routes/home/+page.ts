@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types';
-export async function load({ fetch }) {
+export async function load({ fetch }:any) {
     try{
         const url=`/data/food.json`
         const response =await fetch(url);

@@ -5,6 +5,7 @@ const logout=()=>{
     if(browser){
         window.localStorage.clear()
         goto('/')
+        // window.location.reload()
     }
 }
 </script>

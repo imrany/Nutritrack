@@ -15,7 +15,7 @@
     const handleLogin=async(e:any)=>{
         try{
             e.preventDefault()
-            btnStyle="background:gray;"
+            btnStyle="background:gray; cursor:wait;"
             const response=await fetch('/api/user/login',{
                 method:"POST",
                 headers:{
@@ -31,10 +31,14 @@
                 alert(parseRes.error)
                 btnStyle="background:green;"
             }else{
-                alert(parseRes.msg)
-                const userdata=JSON.stringify(parseRes.body)
-                localStorage.setItem("userdata",userdata)
-                goto('/home')
+                if(parseRes.msg!=undefined){
+                    alert(parseRes.msg)
+                    const userdata=JSON.stringify(parseRes.body)
+                    localStorage.setItem("userdata",userdata)
+                    goto('/home')
+                }else{
+                    alert("No internet")
+                }
             }
         }catch(error:any){
             console.log(error)
@@ -58,7 +62,7 @@
         <input name="username" required type="text" placeholder="John doe" class="border-gray-400 border-[1px] p-2 mt-1 rounded-md focus:outline-green-400"/>
         <!-- svelte-ignore a11y-label-has-associated-control -->
         <label class="text-lg mt-1">Enter password</label>
-        <input name="password" required type="password" class="border-gray-400 border-[1px] p-2 mt-1 rounded-md focus:outline-green-400"/>
+        <input name="password" minlength="8" required type="password" class="border-gray-400 border-[1px] p-2 mt-1 rounded-md focus:outline-green-400"/>
         <button style={btnStyle} class="rounded-md mt-3 text-white h-[40px] flex justify-center items-center">Submit</button>
         <a href="/" class="mt-4 text-blue-500 underline text-center">Create account instead?</a>
     </form>

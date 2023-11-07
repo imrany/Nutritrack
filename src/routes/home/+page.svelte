@@ -9,7 +9,7 @@
     import { onMount } from 'svelte';
     import { getContext } from 'svelte';
     import { goto } from '$app/navigation';
-  import { browser } from '$app/environment';
+    import { browser } from '$app/environment';
 
     export let data: PageData;
     const userdata:any = getContext('userdata');
@@ -58,7 +58,9 @@
         e.preventDefault()
         data.data.forEach((data:any)=>{
             search=true
-            if(data.title.includes(search_query)){
+            let firstLetter=search_query.slice(0,1).toUpperCase()
+            let q=`${firstLetter}${search_query.slice(1,search_query.length)}`
+            if(data.title.includes(q)){
                 console.log(data)
                 search_data.push(data)
                 e.target.reset()

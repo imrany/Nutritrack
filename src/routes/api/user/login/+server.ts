@@ -7,9 +7,13 @@ export const POST: RequestHandler = async ({ request }) => {
   const { username, password } = await request.json(); 
   const getUserDetails:any = await db.collection('users').find({username}).toArray()
   const addUser=await compare(password,getUserDetails[0].password)
-  if(addUser){
+  if(getUserDetails){
+    if(addUser){
       return json({msg:"Login successfull",body:getUserDetails[0]}); 
     }else{
-      return json({error:"Login unsuccessfull"}); 
+      return json({error:"You've entered the wrong password"}); 
     }
+  }else{
+    return json({error:`Username ${username} doesn't exist`})
+  }
 };
